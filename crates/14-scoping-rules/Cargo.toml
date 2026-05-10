@@ -1,0 +1,4 @@
+[package]
+name = "s14-scoping-rules"
+version = "0.1.0"
+edition = "2024"

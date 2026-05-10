@@ -1,0 +1,4 @@
+[package]
+name = "s07-flow-of-control"
+version = "0.1.0"
+edition = "2024"
