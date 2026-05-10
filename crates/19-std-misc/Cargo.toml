@@ -1,0 +1,4 @@
+[package]
+name = "s19-std-misc"
+version = "0.1.0"
+edition = "2024"
