@@ -1,0 +1,4 @@
+[package]
+name = "s05-casting"
+version = "0.1.0"
+edition = "2024"
