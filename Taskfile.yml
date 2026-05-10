@@ -1,0 +1,64 @@
+version: "3"
+
+tasks:
+  build:
+    desc: Build the project
+    cmds:
+      - cargo build
+
+  run:
+    desc: Build and run the project
+    cmds:
+      - cargo run
+
+  test:
+    desc: Run tests
+    cmds:
+      - cargo test
+
+  lint:
+    desc: Run clippy linter
+    cmds:
+      - cargo clippy -- -D warnings
+
+  fmt:
+    desc: Format code
+    cmds:
+      - cargo fmt
+
+  fmt-check:
+    desc: Check if code is formatted
+    cmds:
+      - cargo fmt --check
+
+  doc:
+    desc: Generate and open documentation
+    cmds:
+      - cargo doc --open
+
+  check:
+    desc: Quick check for compilation errors
+    cmds:
+      - cargo check
+
+  watch:
+    desc: Watch for changes and run tests
+    cmds:
+      - cargo watch -x test
+
+  bench:
+    desc: Run benchmarks
+    cmds:
+      - cargo bench
+
+  clean:
+    desc: Remove build artifacts
+    cmds:
+      - cargo clean
+
+  ci:
+    desc: Run all checks (fmt, clippy, test)
+    cmds:
+      - task: fmt-check
+      - task: lint
+      - task: test
