@@ -16,4 +16,38 @@
 
 fn main() {
     // ここにコードを書いてください
+    // 整数型間のキャスト
+    let a: i32 = 42;
+    let b: u8 = a as u8;
+    println!("i32 -> u8: {} -> {}", a, b);
+
+    // 丸めに注意
+    let c: i32 = 300;
+    let d: u8 = c as u8;
+    println!("i32 -> u8: {} -> {}", c, d); // 300 -> 44 オーバーフロー
+
+    // 符号付き -> 符号なし
+    let e: i8 = -1;
+    let f: u8 = e as u8;
+    println!("i8 -> u8: {} -> {}", e, f);
+
+    // 浮動小数点数 -> 整数(少数部分は切り捨て)
+    let g: f64 = 3.99;
+    let h: i32 = g as i32;
+    println!("f64 -> i32: {} -> {}", g, h);
+
+    // char -> u8
+    let k: char = 'A';
+    let l: u8 = k as u8;
+    println!("char -> u8: {} -> {}", k, l);
+
+    // u8 -> char
+    let m: u8 = 65;
+    let n: char = m as char;
+    println!("u8 -> char: {} -> '{}'", m, n);
+
+    // 型推論
+    let mut v = Vec::new();
+    v.push(42);
+    println!("{:?}", v);
 }
