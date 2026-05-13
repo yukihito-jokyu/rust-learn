@@ -1,6 +1,7 @@
 # モジュール（Modules）
 
 ## 学習内容
+
 - 可視性（`pub`）
 - 構造体の可視性
 - `use` 宣言
@@ -8,6 +9,7 @@
 - モジュールの分割（ファイルへの分離）
 
 ## 参考ページ
+
 https://doc.rust-jp.rs/rust-by-example-ja/mod.html
 
 ## 内容
@@ -190,6 +192,7 @@ fn main() {
 #### インラインからファイルへ
 
 インラインで定義したモジュール：
+
 ```rust
 // main.rs
 mod math {
@@ -200,6 +203,7 @@ mod math {
 ```
 
 これをファイルに分割：
+
 ```
 src/
 ├── main.rs
