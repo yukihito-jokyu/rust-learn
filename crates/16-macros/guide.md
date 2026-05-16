@@ -1,6 +1,7 @@
 # 16 - マクロ（Macros）
 
 ## 学習内容
+
 - マクロの基本概念
 - `macro_rules!`による宣言的マクロ
 - 指定子（Designators）
@@ -10,6 +11,7 @@
 - DSL（Domain Specific Languages）
 
 ## 参考ページ
+
 https://doc.rust-jp.rs/rust-by-example-ja/macros.html
 
 ## 内容
@@ -19,6 +21,7 @@ https://doc.rust-jp.rs/rust-by-example-ja/macros.html
 マクロはメタプログラミングの手段であり、コンパイル時にコードを生成します。関数とは異なり、可変長の引数を取ることができ、コンパイル時に展開されます。
 
 Rustのマクロには以下の種類があります：
+
 - **宣言的マクロ**（`macro_rules!`）
 - **手続き的マクロ**（deriveマクロ、属性マクロ、関数マクロ）
 
@@ -90,21 +93,21 @@ fn main() {
 
 主な指定子の一覧：
 
-| 指定子 | 説明 | 例 |
-|--------|------|-----|
-| `ident` | 識別子 | `x`, `my_func` |
-| `expr` | 式 | `1 + 2`, `foo()` |
-| `ty` | 型 | `i32`, `String` |
-| `path` | パス | `std::collections::HashMap` |
-| `stmt` | 文 | `let x = 5;` |
-| `block` | ブロック | `{ ... }` |
-| `pat` | パターン | `Some(x)` |
-| `literal` | リテラル | `42`, `"hello"` |
-| `meta` | メタアイテム | `#[derive(Debug)]` の `derive(Debug)` |
-| `tt` | トークンツリー | 任意のトークン |
-| `item` | アイテム | `fn foo() {}`, `struct Bar;` |
-| `lifetime` | ライフタイム | `'a`, `'static` |
-| `vis` | 可視性修飾子 | `pub`, `pub(crate)` |
+| 指定子     | 説明           | 例                                    |
+| ---------- | -------------- | ------------------------------------- |
+| `ident`    | 識別子         | `x`, `my_func`                        |
+| `expr`     | 式             | `1 + 2`, `foo()`                      |
+| `ty`       | 型             | `i32`, `String`                       |
+| `path`     | パス           | `std::collections::HashMap`           |
+| `stmt`     | 文             | `let x = 5;`                          |
+| `block`    | ブロック       | `{ ... }`                             |
+| `pat`      | パターン       | `Some(x)`                             |
+| `literal`  | リテラル       | `42`, `"hello"`                       |
+| `meta`     | メタアイテム   | `#[derive(Debug)]` の `derive(Debug)` |
+| `tt`       | トークンツリー | 任意のトークン                        |
+| `item`     | アイテム       | `fn foo() {}`, `struct Bar;`          |
+| `lifetime` | ライフタイム   | `'a`, `'static`                       |
+| `vis`      | 可視性修飾子   | `pub`, `pub(crate)`                   |
 
 ### オーバーロード
 
@@ -182,6 +185,7 @@ fn main() {
 ```
 
 繰り返しの構文：
+
 - `$(...),*` - 0回以上の繰り返し（カンマ区切り）
 - `$(...),+` - 1回以上の繰り返し（カンマ区切り）
 - `$(...),?` - 0回または1回
