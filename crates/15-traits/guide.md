@@ -1,6 +1,7 @@
 # 15 - トレイト（Traits）
 
 ## 学習内容
+
 - トレイトの定義と実装
 - デフォルトメソッド
 - トレイト境界（Trait Bounds）
@@ -11,6 +12,7 @@
 - トレイトオブジェクトと動的ディスパッチ
 
 ## 参考ページ
+
 https://doc.rust-jp.rs/rust-by-example-ja/trait.html
 
 ## 内容
