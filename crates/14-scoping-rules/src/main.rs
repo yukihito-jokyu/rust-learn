@@ -29,6 +29,49 @@
 // TODO: ライフタイムを持つ構造体を定義してください
 // ヒント: struct Excerpt<'a> { content: &'a str }
 
+struct Resource {
+    name: String,
+}
+
+impl Drop for Resource {
+    fn drop(&mut self) {
+        println!("Dropping resource: {}", self.name);
+    }
+}
+
+fn take_ownership(s: String) {
+    println!("taken: {}", s);
+}
+
+fn append_world(s: &mut String) {
+    s.push_str(", world");
+}
+
+// 'a はライフタイムパラメータ
+// 戻り値の参照は x と y の短い方のライフタイムを持つ
+fn longest<'a>(x: &'a str, y: &'a str) -> &'a str {
+    if x.len() > y.len() { x } else { y }
+}
+
 fn main() {
     // ここにコードを書いてください
+    let r1 = Resource { name: String::from("A") };
+    {
+        let r2 = Resource { name: String::from("B") };
+        println!("Inside inner scope");
+    } // r2 がドロップされる
+    println!("Outside inner scope");
+
+    let s = String::from("hello");
+    take_ownership(s);
+
+    let s1 = String::from("long string");
+
+    {
+        let s2 = String::from("xyz");
+        let result = longest(s1.as_str(), s2.as_str());
+        println!("longest: {}", result);
+        // s2 がスコープを抜けた後に result を使うとエラー
+    }
+    // println!("result: {}", result); // エラー！ s2 はもう存在しない
 }
