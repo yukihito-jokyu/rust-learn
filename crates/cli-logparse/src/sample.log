@@ -1,0 +1,155 @@
+2024-01-15 08:01:12 [INFO] Application started
+2024-01-15 08:01:13 [DEBUG] Loading configuration from /etc/app/config.toml
+2024-01-15 08:01:14 [INFO] Configuration loaded successfully
+2024-01-15 08:01:15 [DEBUG] Initializing database connection pool (max=10)
+2024-01-15 08:02:00 [INFO] Database connection pool initialized
+2024-01-15 08:05:23 [INFO] HTTP server listening on 0.0.0.0:8080
+2024-01-15 08:10:01 [DEBUG] Cache hit for key=user:1001
+2024-01-15 08:10:05 [INFO] User login: user_id=1001, ip=192.168.1.10
+2024-01-15 08:15:30 [DEBUG] Cache hit for key=session:abc123
+2024-01-15 08:20:44 [INFO] API request: GET /api/users (200, 12ms)
+2024-01-15 08:25:11 [DEBUG] Cache miss for key=product:5523
+2024-01-15 08:30:02 [WARN] Slow query detected: SELECT * FROM orders WHERE status='pending' (2340ms)
+2024-01-15 08:35:18 [INFO] API request: POST /api/orders (201, 45ms)
+2024-01-15 08:40:55 [DEBUG] Cache hit for key=user:2045
+2024-01-15 08:45:03 [INFO] Scheduled job started: daily_report
+2024-01-15 08:45:10 [INFO] Scheduled job completed: daily_report (7.2s)
+2024-01-15 08:50:22 [DEBUG] Cache miss for key=config:features
+2024-01-15 08:55:01 [INFO] API request: GET /api/products (200, 23ms)
+2024-01-15 09:00:05 [INFO] Health check passed
+2024-01-15 09:05:12 [DEBUG] Cache hit for key=user:1001
+2024-01-15 09:10:30 [INFO] API request: GET /api/users/1001 (200, 8ms)
+2024-01-15 09:15:44 [WARN] High memory usage detected: 85% (threshold: 80%)
+2024-01-15 09:20:01 [INFO] API request: PUT /api/users/1001 (200, 15ms)
+2024-01-15 09:25:18 [ERROR] Database connection failed: timeout after 30s
+2024-01-15 09:25:19 [INFO] Retrying connection... attempt 1/3
+2024-01-15 09:25:22 [INFO] Connection restored
+2024-01-15 09:30:05 [DEBUG] Cache hit for key=product:100
+2024-01-15 09:30:10 [INFO] API request: GET /api/products/100 (200, 11ms)
+2024-01-15 09:35:22 [WARN] Deprecated API endpoint called: /api/v1/users (client: 10.0.0.5)
+2024-01-15 09:40:33 [DEBUG] Background task started: cleanup_expired_sessions
+2024-01-15 09:40:40 [INFO] Cleaned up 142 expired sessions
+2024-01-15 09:45:01 [INFO] API request: POST /api/auth/login (200, 32ms)
+2024-01-15 09:50:15 [DEBUG] Cache hit for key=user:3050
+2024-01-15 09:55:02 [INFO] API request: GET /api/orders (200, 18ms)
+2024-01-15 10:00:05 [INFO] Health check passed
+2024-01-15 10:05:11 [DEBUG] Cache miss for key=stats:daily
+2024-01-15 10:10:22 [INFO] API request: GET /api/stats (200, 56ms)
+2024-01-15 10:15:30 [ERROR] Timeout on API request to /api/external/weather (504, 30001ms)
+2024-01-15 10:15:31 [WARN] Fallback to cached weather data (age: 2h)
+2024-01-15 10:20:05 [INFO] API request: GET /api/users (200, 14ms)
+2024-01-15 10:25:18 [DEBUG] Cache hit for key=product:5523
+2024-01-15 10:30:45 [ERROR] Database connection failed: connection refused
+2024-01-15 10:30:46 [INFO] Retrying connection... attempt 1/3
+2024-01-15 10:30:49 [ERROR] Database connection failed: connection refused
+2024-01-15 10:30:50 [INFO] Retrying connection... attempt 2/3
+2024-01-15 10:30:53 [INFO] Connection restored
+2024-01-15 10:35:01 [WARN] Rate limit approaching for client 10.0.0.25 (95/100)
+2024-01-15 10:40:10 [DEBUG] Cache hit for key=user:1001
+2024-01-15 10:45:22 [INFO] API request: POST /api/orders (201, 38ms)
+2024-01-15 10:50:33 [DEBUG] Cache miss for key=product:200
+2024-01-15 10:55:01 [INFO] API request: GET /api/products/200 (200, 9ms)
+2024-01-15 11:00:05 [INFO] Health check passed
+2024-01-15 11:05:12 [ERROR] Permission denied: cannot write to /var/log/app/audit.log
+2024-01-15 11:10:20 [DEBUG] Cache hit for key=session:def456
+2024-01-15 11:15:30 [INFO] API request: DELETE /api/orders/402 (204, 5ms)
+2024-01-15 11:20:44 [WARN] SSL certificate expiring soon: 14 days remaining
+2024-01-15 11:25:01 [DEBUG] Cache hit for key=user:2045
+2024-01-15 11:30:15 [INFO] API request: GET /api/users (200, 16ms)
+2024-01-15 11:35:22 [ERROR] Timeout on API request to /api/external/payments (504, 30005ms)
+2024-01-15 11:35:23 [WARN] Payment gateway unavailable, queueing transaction
+2024-01-15 11:40:01 [INFO] API request: POST /api/orders (201, 42ms)
+2024-01-15 11:45:10 [DEBUG] Background task started: send_notifications
+2024-01-15 11:45:18 [INFO] Sent 23 notification emails
+2024-01-15 11:50:05 [DEBUG] Cache miss for key=config:limits
+2024-01-15 11:55:33 [INFO] API request: GET /api/products (200, 20ms)
+2024-01-15 12:00:05 [INFO] Health check passed
+2024-01-15 12:05:12 [DEBUG] Cache hit for key=user:1001
+2024-01-15 12:10:30 [INFO] API request: PUT /api/users/1001 (200, 12ms)
+2024-01-15 12:15:44 [WARN] Slow query detected: SELECT * FROM products WHERE category='electronics' (1890ms)
+2024-01-15 12:20:01 [INFO] API request: GET /api/products?category=electronics (200, 1920ms)
+2024-01-15 12:25:18 [DEBUG] Cache miss for key=search:laptop
+2024-01-15 12:30:05 [ERROR] Database connection failed: pool exhausted (active=10, max=10)
+2024-01-15 12:30:06 [WARN] Request queued due to connection pool exhaustion
+2024-01-15 12:30:10 [INFO] Connection pool recovered after timeout
+2024-01-15 12:35:22 [INFO] API request: POST /api/auth/logout (200, 3ms)
+2024-01-15 12:40:15 [DEBUG] Cache hit for key=user:3050
+2024-01-15 12:45:01 [INFO] API request: GET /api/users/3050 (200, 7ms)
+2024-01-15 12:50:33 [ERROR] Permission denied: cannot access /tmp/upload_abc.bin
+2024-01-15 12:55:02 [INFO] API request: GET /api/orders (200, 22ms)
+2024-01-15 13:00:05 [INFO] Health check passed
+2024-01-15 13:05:11 [DEBUG] Cache hit for key=product:100
+2024-01-15 13:10:20 [INFO] API request: POST /api/orders (201, 35ms)
+2024-01-15 13:15:44 [WARN] High memory usage detected: 82% (threshold: 80%)
+2024-01-15 13:20:01 [DEBUG] Cache miss for key=stats:hourly
+2024-01-15 13:25:18 [INFO] API request: GET /api/stats/hourly (200, 65ms)
+2024-01-15 13:30:30 [ERROR] Database connection failed: timeout after 30s
+2024-01-15 13:30:31 [INFO] Retrying connection... attempt 1/3
+2024-01-15 13:30:34 [INFO] Connection restored
+2024-01-15 13:35:05 [DEBUG] Cache hit for key=user:2045
+2024-01-15 13:40:10 [INFO] API request: GET /api/users/2045 (200, 10ms)
+2024-01-15 13:45:22 [WARN] Deprecated API endpoint called: /api/v1/products (client: 10.0.0.12)
+2024-01-15 13:50:33 [DEBUG] Background task started: aggregate_metrics
+2024-01-15 13:50:40 [INFO] Metrics aggregated: 847 events processed
+2024-01-15 13:55:01 [ERROR] Timeout on API request to /api/external/shipping (504, 30002ms)
+2024-01-15 13:55:02 [WARN] Shipping service unavailable, using local estimates
+2024-01-15 13:58:00 [INFO] API request: POST /api/orders (201, 40ms)
+2024-01-15 14:00:05 [INFO] Health check passed
+2024-01-15 14:05:12 [DEBUG] Cache hit for key=product:5523
+2024-01-15 14:10:30 [INFO] API request: GET /api/products/5523 (200, 13ms)
+2024-01-15 14:15:44 [ERROR] Permission denied: cannot write to /var/log/app/error.log
+2024-01-15 14:20:01 [WARN] Rate limit exceeded for client 10.0.0.99 (429)
+2024-01-15 14:25:18 [INFO] API request: GET /api/users (200, 11ms)
+2024-01-15 14:30:05 [DEBUG] Cache miss for key=product:300
+2024-01-15 14:35:22 [INFO] API request: POST /api/auth/login (401, 2ms)
+2024-01-15 14:40:01 [ERROR] Database connection failed: timeout after 30s
+2024-01-15 14:40:02 [INFO] Retrying connection... attempt 1/3
+2024-01-15 14:40:05 [ERROR] Database connection failed: timeout after 30s
+2024-01-15 14:40:06 [INFO] Retrying connection... attempt 2/3
+2024-01-15 14:40:09 [INFO] Connection restored
+2024-01-15 14:45:10 [DEBUG] Cache hit for key=user:1001
+2024-01-15 14:50:15 [INFO] API request: GET /api/orders/890 (200, 6ms)
+2024-01-15 14:55:33 [WARN] Slow query detected: UPDATE users SET last_login=NOW() (1560ms)
+2024-01-15 15:00:05 [INFO] Health check passed
+2024-01-15 15:05:12 [DEBUG] Cache hit for key=session:ghi789
+2024-01-15 15:10:30 [INFO] API request: PUT /api/users/3050 (200, 18ms)
+2024-01-15 15:15:44 [ERROR] Timeout on API request to /api/external/weather (504, 30008ms)
+2024-01-15 15:20:01 [DEBUG] Cache miss for key=weather:tokyo
+2024-01-15 15:25:18 [WARN] High memory usage detected: 88% (threshold: 80%)
+2024-01-15 15:30:05 [INFO] Triggering garbage collection
+2024-01-15 15:30:12 [INFO] GC completed, memory usage: 62%
+2024-01-15 15:35:22 [INFO] API request: GET /api/products (200, 19ms)
+2024-01-15 15:40:33 [DEBUG] Cache hit for key=user:2045
+2024-01-15 15:45:01 [ERROR] Permission denied: cannot read /etc/app/secrets.env
+2024-01-15 15:50:10 [INFO] API request: POST /api/orders (201, 44ms)
+2024-01-15 15:55:22 [DEBUG] Background task started: backup_database
+2024-01-15 15:55:45 [INFO] Database backup completed (1.2GB, 23s)
+2024-01-15 16:00:05 [INFO] Health check passed
+2024-01-15 16:05:12 [DEBUG] Cache hit for key=product:100
+2024-01-15 16:10:20 [INFO] API request: GET /api/users (200, 15ms)
+2024-01-15 16:15:30 [WARN] Deprecated API endpoint called: /api/v1/orders (client: 10.0.0.5)
+2024-01-15 16:20:44 [ERROR] Database connection failed: connection refused
+2024-01-15 16:20:45 [INFO] Retrying connection... attempt 1/3
+2024-01-15 16:20:48 [INFO] Connection restored
+2024-01-15 16:25:01 [DEBUG] Cache miss for key=stats:daily
+2024-01-15 16:30:15 [INFO] API request: GET /api/stats (200, 58ms)
+2024-01-15 16:35:22 [ERROR] Timeout on API request to /api/external/analytics (504, 30015ms)
+2024-01-15 16:40:01 [WARN] SSL certificate expiring soon: 13 days remaining
+2024-01-15 16:45:10 [INFO] API request: POST /api/auth/refresh (200, 25ms)
+2024-01-15 16:50:05 [DEBUG] Cache hit for key=session:abc123
+2024-01-15 16:55:33 [INFO] API request: DELETE /api/orders/403 (204, 4ms)
+2024-01-15 17:00:05 [INFO] Health check passed
+2024-01-15 17:05:12 [DEBUG] Cache hit for key=user:3050
+2024-01-15 17:10:20 [ERROR] Permission denied: cannot write to /tmp/session_store.dat
+2024-01-15 17:15:30 [INFO] API request: GET /api/products (200, 17ms)
+2024-01-15 17:20:44 [WARN] Rate limit approaching for client 10.0.0.60 (92/100)
+2024-01-15 17:25:01 [DEBUG] Cache miss for key=search:headphones
+2024-01-15 17:30:15 [INFO] API request: GET /api/products/search?q=headphones (200, 78ms)
+2024-01-15 17:35:22 [ERROR] Database connection failed: pool exhausted (active=10, max=10)
+2024-01-15 17:35:23 [WARN] Request queued due to connection pool exhaustion
+2024-01-15 17:35:30 [INFO] Connection pool recovered after timeout
+2024-01-15 17:40:01 [INFO] API request: POST /api/orders (201, 39ms)
+2024-01-15 17:45:10 [DEBUG] Background task started: generate_reports
+2024-01-15 17:45:25 [INFO] Reports generated: 5 PDF reports
+2024-01-15 17:50:05 [DEBUG] Cache hit for key=user:1001
+2024-01-15 17:55:33 [INFO] API request: GET /api/users/1001 (200, 9ms)
