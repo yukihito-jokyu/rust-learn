@@ -10,6 +10,12 @@ use std::thread;
 fn main() {
     println!("=== Box の使用 ===");
 
+    let boxed_int = Box::new(5);
+    println!("Boxの中身: {}", boxed_int);
+
+    let unboxed = *boxed_int;
+    println!("取り出した値: {}", unboxed);
+
     // TODO: Box::newでヒープに値を配置してください
 
     // TODO: 再帰的なデータ構造をBoxを使って定義してください

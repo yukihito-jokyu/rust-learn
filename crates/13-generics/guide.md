@@ -1,6 +1,7 @@
 # ジェネリクス（Generics）
 
 ## 学習内容
+
 - ジェネリック関数
 - ジェネリック実装
 - トレイト境界
@@ -10,6 +11,7 @@
 - PhantomData
 
 ## 参考ページ
+
 https://doc.rust-jp.rs/rust-by-example-ja/generics.html
 
 ## 内容
@@ -128,15 +130,15 @@ fn main() {
 
 #### よく使うトレイト境界
 
-| トレイト境界 | 意味 |
-|---|---|
-| `Display` | `{}` で表示可能 |
-| `Debug` | `{:?}` で表示可能 |
-| `Clone` | `.clone()` で複製可能 |
-| `Copy` | 代入時に自動複製 |
-| `PartialOrd` | 比較演算子が使える |
-| `ToString` | `.to_string()` が使える |
-| `Default` | `T::default()` が使える |
+| トレイト境界 | 意味                    |
+| ------------ | ----------------------- |
+| `Display`    | `{}` で表示可能         |
+| `Debug`      | `{:?}` で表示可能       |
+| `Clone`      | `.clone()` で複製可能   |
+| `Copy`       | 代入時に自動複製        |
+| `PartialOrd` | 比較演算子が使える      |
+| `ToString`   | `.to_string()` が使える |
+| `Default`    | `T::default()` が使える |
 
 ### 複数境界（`+`）
 

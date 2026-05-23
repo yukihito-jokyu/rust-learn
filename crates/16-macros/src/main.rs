@@ -21,6 +21,25 @@
 // TODO: DRYマクロを定義してください
 // 複数の型に対して同じトレイト実装を生成するマクロ
 
+macro_rules! test {
+    // 引数なし
+    ($left:expr) => {
+        println!("値: {:?}", $left);
+    };
+    // 2つの引数を比較
+    ($left:expr, $right:expr) => {
+        println!("{:?} と {:?} を比較: {}", $left, $right, $left == $right);
+    };
+    // 条件付きテスト
+    ($left:expr, $right:expr, $should_eq:expr) => {
+        if $should_eq {
+            test!($left, $right);
+        } else {
+            println!("比較をスキップ: {:?}, {:?}", $left, $right);
+        }
+    };
+}
+
 fn main() {
     println!("=== 基本的なマクロ ===");
 
@@ -37,6 +56,12 @@ fn main() {
     println!("\n=== オーバーロード ===");
 
     // TODO: 引数1つと引数2つのパターンを試してください
+
+    test!(1); // 値: 1
+    test!(1, 1); // 1 と 1 を比較: true
+    test!(1, 2); // 1 と 2 を比較: false
+    test!(1 + 1, 2, true); // 2 と 2 を比較: true
+    test!(1 + 1, 2, false); // 比較をスキップ: 2, 2
 
     println!("\n=== 繰り返しマクロ ===");
 

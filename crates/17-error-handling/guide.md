@@ -1,6 +1,7 @@
 # 17 - エラーハンドリング（Error Handling）
 
 ## 学習内容
+
 - `panic!`と回復不可能なエラー
 - `Option`と`unwrap`
 - `Result`型
@@ -10,6 +11,7 @@
 - `Box<dyn Error>`によるエラーの抽象化
 
 ## 参考ページ
+
 https://doc.rust-jp.rs/rust-by-example-ja/error.html
 
 ## 内容

@@ -1,12 +1,14 @@
 # Cargo
 
 ## 学習内容
+
 - Cargo.tomlの設定
 - 依存関係の管理
 - テストの書き方
 - ビルドプロファイル
 
 ## 参考ページ
+
 https://doc.rust-jp.rs/rust-by-example-ja/cargo.html
 
 ## 内容
@@ -175,7 +177,7 @@ use my_project::add;
 
 ドキュメンテーションコメント内のコード例もテストされます。
 
-```rust
+````rust
 /// 2つの数値を足し算します。
 ///
 /// # Examples
@@ -187,7 +189,7 @@ use my_project::add;
 pub fn add(a: i32, b: i32) -> i32 {
     a + b
 }
-```
+````
 
 ### ビルドプロファイル
 
@@ -214,29 +216,29 @@ opt-level = 3
 
 #### プロファイルオプション
 
-| オプション | 説明 |
-|---|---|
-| `opt-level` | `0`（なし）~ `3`（最大）、`"s"`/`"z"`（サイズ最適化） |
-| `debug` | `true`/`false`、または `0`~`2` のレベル |
-| `lto` | `true`/`false`/`"thin"`/`"fat"` |
-| `codegen-units` | 1以上の整数（少ないほど最適化される） |
-| `strip` | `true`/`false` |
-| `panic` | `"unwind"`/`"abort"` |
+| オプション      | 説明                                                  |
+| --------------- | ----------------------------------------------------- |
+| `opt-level`     | `0`（なし）~ `3`（最大）、`"s"`/`"z"`（サイズ最適化） |
+| `debug`         | `true`/`false`、または `0`~`2` のレベル               |
+| `lto`           | `true`/`false`/`"thin"`/`"fat"`                       |
+| `codegen-units` | 1以上の整数（少ないほど最適化される）                 |
+| `strip`         | `true`/`false`                                        |
+| `panic`         | `"unwind"`/`"abort"`                                  |
 
 ### Cargoコマンド一覧
 
-| コマンド | 説明 |
-|---|---|
-| `cargo new name` | 新しいプロジェクトを作成 |
-| `cargo init` | 既存のディレクトリでプロジェクト初期化 |
-| `cargo build` | コンパイル（デバッグビルド） |
-| `cargo build --release` | リリースビルド |
-| `cargo run` | ビルドして実行 |
-| `cargo test` | テストを実行 |
-| `cargo check` | コンパイルチェック（バイナリ生成なし、高速） |
-| `cargo doc` | ドキュメントを生成 |
-| `cargo doc --open` | ドキュメントを生成してブラウザで開く |
-| `cargo update` | 依存関係を更新（Cargo.lockを更新） |
-| `cargo clean` | ビルド成果物を削除 |
-| `cargo clippy` | Lintチェック |
-| `cargo fmt` | コードフォーマット |
+| コマンド                | 説明                                         |
+| ----------------------- | -------------------------------------------- |
+| `cargo new name`        | 新しいプロジェクトを作成                     |
+| `cargo init`            | 既存のディレクトリでプロジェクト初期化       |
+| `cargo build`           | コンパイル（デバッグビルド）                 |
+| `cargo build --release` | リリースビルド                               |
+| `cargo run`             | ビルドして実行                               |
+| `cargo test`            | テストを実行                                 |
+| `cargo check`           | コンパイルチェック（バイナリ生成なし、高速） |
+| `cargo doc`             | ドキュメントを生成                           |
+| `cargo doc --open`      | ドキュメントを生成してブラウザで開く         |
+| `cargo update`          | 依存関係を更新（Cargo.lockを更新）           |
+| `cargo clean`           | ビルド成果物を削除                           |
+| `cargo clippy`          | Lintチェック                                 |
+| `cargo fmt`             | コードフォーマット                           |

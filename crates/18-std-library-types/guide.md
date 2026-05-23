@@ -1,6 +1,7 @@
 # 18 - 標準ライブラリの型（Standard Library Types）
 
 ## 学習内容
+
 - `Box<T>` - ヒープ割り当て
 - `String` - 文字列操作
 - `Option<T>` - 値の有無
@@ -11,6 +12,7 @@
 - `Cell<T>` / `RefCell<T>` - 内部可変性
 
 ## 参考ページ
+
 https://doc.rust-jp.rs/rust-by-example-ja/std.html
 
 ## 内容

@@ -1,6 +1,7 @@
 # 21 - Unsafe Rust
 
 ## 学習内容
+
 - `unsafe`ブロック
 - unsafe関数
 - 生ポインタ（Raw Pointers）
@@ -10,6 +11,7 @@
 - unsafeの安全性ガイドライン
 
 ## 参考ページ
+
 https://doc.rust-jp.rs/rust-by-example-ja/unsafe.html
 
 ## 内容
@@ -19,6 +21,7 @@ https://doc.rust-jp.rs/rust-by-example-ja/unsafe.html
 Rustの安全性保証は、5つの主要なチェックによって守られています。`unsafe`ブロックはこれらのチェックの一部を無効にし、プログラマが手動で安全性を保証する責任を負います。
 
 unsafeブロックで可能になる操作（「unsafeスーパーパワー」）：
+
 1. **生ポインタのデリファレンス**
 2. **unsafe関数やメソッドの呼び出し**
 3. **可変静的変数へのアクセスや変更**

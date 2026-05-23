@@ -1,6 +1,7 @@
 # 関数（Functions）
 
 ## 学習内容
+
 - 関数の定義と呼び出し
 - 引数と戻り値
 - クロージャ（無名関数）
@@ -8,6 +9,7 @@
 - 発散する関数（diverging functions）
 
 ## 参考ページ
+
 https://doc.rust-jp.rs/rust-by-example-ja/fn.html
 
 ## 内容
