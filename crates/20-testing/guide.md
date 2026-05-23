@@ -1,6 +1,7 @@
 # 20 - テスト（Testing）
 
 ## 学習内容
+
 - ユニットテスト
 - `#[test]`属性
 - `assert!`、`assert_eq!`、`assert_ne!`マクロ
@@ -11,6 +12,7 @@
 - テストの無視とフィルタリング
 
 ## 参考ページ
+
 https://doc.rust-jp.rs/rust-by-example-ja/testing.html
 
 ## 内容
@@ -220,7 +222,7 @@ mod tests {
 
 ドキュメンテーションコメント内のコード例はテストとして実行されます。
 
-```rust
+````rust
 /// 2つの数値を加算する。
 ///
 /// # Examples
@@ -247,7 +249,7 @@ pub fn add(a: i32, b: i32) -> i32 {
 pub fn is_positive(n: i32) -> bool {
     n > 0
 }
-```
+````
 
 ### テストの無視とフィルタリング
 
